@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+.env
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+.DS_Store
+models/
+!models/.gitkeep
+workspaces/
+!workspaces/.gitkeep

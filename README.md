@@ -1,31 +1,27 @@
 # AI Training Center
 
-A complete local AI training center starter that lets you:
-- create training projects
-- upload or paste datasets
-- fine-tune a small language model with Hugging Face
-- track trained models
-- chat with the newest trained model
-- run entirely from a local Python server
+A premium local AI training center for creating projects, training custom models, and chatting with them using a beautiful interactive interface.
 
 ## Features
 
-- Project dashboard with training status
-- Dataset editor with sample text uploads
-- Fine-tuning pipeline using `transformers` and `torch`
-- Export-ready model folders under `models/`
-- Chat endpoint for interactive AI conversations
-- Simple, modern UI served from the same app
+- 3D animated launch experience
+- AI training dashboard with project management
+- Dataset creation and model fine-tuning pipeline
+- Local model storage and versioning
+- Chat interface for conversation with the trained model
+- Responsive premium UI
 
 ## Tech stack
 
 - FastAPI
 - Uvicorn
-- Transformers
+- Python
 - PyTorch
-- Vanilla HTML/CSS/JS frontend
+- Transformers
+- Datasets
+- Three.js (browser animation)
 
-## Quick start
+## Run locally
 
 ```bash
 python -m venv .venv
@@ -34,18 +30,20 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Then open http://localhost:8000
+Then open:
+
+```text
+http://localhost:8000
+```
 
 ## Notes
 
-This starter is designed for a real, runnable training loop on a local machine with CPU or GPU support. For production-grade model training, you should add:
-- dataset storage
-- authentication
-- user accounts
-- GPU orchestration
-- deployment hosting
-- model registry and versioning
+This app uses a lightweight transformer model (`distilgpt2`) so it can run on most machines. You can swap it for `gpt2`, `TinyLlama`, or another model later depending on your hardware.
 
-## Important
+## Production path
 
-The app uses a small base model (`distilgpt2`) for a working demo. You can replace it with a larger model such as `gpt2`, `TinyLlama`, or a domain-specific model depending on your hardware.
+- Add auth and user accounts
+- Add real model registry and deployments
+- Add dataset upload support
+- Add evaluation metrics and export tooling
+- Add orchestration for GPU workloads

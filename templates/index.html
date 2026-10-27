@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Training Center</title>
+    <meta name="description" content="A premium AI training center for building custom models and chatting with them." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script type="module">
+      import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+      window.THREE = THREE;
+    </script>
+  </head>
+  <body>
+    <div id="scene-root"></div>
+
+    <div class="page-shell">
+      <aside class="sidebar glass-panel">
+        <div class="brand-block">
+          <div class="brand-mark">A</div>
+          <div>
+            <p class="eyebrow">Training Suite</p>
+            <h2>AI Center</h2>
+          </div>
+        </div>
+
+        <button class="primary-button" id="new-project-btn">New project</button>
+
+        <div class="projects-block">
+          <div class="section-title-row">
+            <span>Projects</span>
+            <span class="tiny-pill">Live</span>
+          </div>
+          <div id="project-list" class="project-list"></div>
+        </div>
+      </aside>
+
+      <main class="content-panel">
+        <header class="topbar glass-panel">
+          <div>
+            <p class="eyebrow">Local AI Workspace</p>
+            <h1 id="project-title">Create a project</h1>
+          </div>
+          <div class="status-pill" id="status-pill">Draft</div>
+        </header>
+
+        <section class="glass-panel card">
+          <div class="card-header-row">
+            <h3>Project setup</h3>
+            <span class="small-badge">New</span>
+          </div>
+
+          <div class="two-col-grid">
+            <label class="field-wrap">
+              <span>Project name</span>
+              <input id="project-name" type="text" placeholder="My flagship model" />
+            </label>
+
+            <label class="field-wrap">
+              <span>Description</span>
+              <input id="project-description" type="text" placeholder="What should your model learn?" />
+            </label>
+          </div>
+
+          <div class="action-row">
+            <button class="primary-button" id="create-project-btn">Create project</button>
+          </div>
+        </section>
+
+        <section class="glass-panel card">
+          <div class="card-header-row">
+            <h3>Training data</h3>
+            <span class="small-badge alt">Dataset</span>
+          </div>
+
+          <textarea id="dataset-text" rows="12" placeholder="Paste prompts, instructions, or high-quality knowledge examples here. The model learns from this dataset."></textarea>
+
+          <div class="training-toolbar">
+            <label class="field-wrap compact-field">
+              <span>Epochs</span>
+              <input id="epochs" type="number" min="1" max="6" value="1" />
+            </label>
+            <button class="primary-button" id="train-btn">Train model</button>
+          </div>
+        </section>
+
+        <section class="glass-panel card chat-card">
+          <div class="card-header-row">
+            <h3>Model chat</h3>
+            <span class="small-badge accent">Live</span>
+          </div>
+
+          <div id="chat-output" class="chat-output">
+            <div class="chat-empty">Your trained model responses will appear here.</div>
+          </div>
+
+          <div class="chat-compose">
+            <textarea id="chat-input" rows="3" placeholder="Ask your model anything, or test a custom instruction..."></textarea>
+            <button class="primary-button" id="chat-btn">Send</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
