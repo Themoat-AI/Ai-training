@@ -11,3 +11,4 @@ models/
 !models/.gitkeep
 workspaces/
 !workspaces/.gitkeep
+dist/
