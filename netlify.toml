@@ -1,0 +1,6 @@
+# Netlify can't run the long-lived FastAPI server (app.py), so only the
+# frontend UI is published here. Python dependencies are installed
+# automatically from requirements.txt using the version pinned in mise.toml.
+[build]
+  command = "rm -rf dist && mkdir -p dist && cp templates/index.html dist/index.html && cp -r static dist/static"
+  publish = "dist"

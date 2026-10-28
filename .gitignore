@@ -11,3 +11,5 @@ models/
 !models/.gitkeep
 workspaces/
 !workspaces/.gitkeep
+dist/
+node_modules/
