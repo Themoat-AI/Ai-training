@@ -12,3 +12,4 @@ models/
 workspaces/
 !workspaces/.gitkeep
 dist/
+node_modules/
