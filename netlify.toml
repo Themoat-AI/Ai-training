@@ -2,5 +2,7 @@
 # frontend UI is published here. Python dependencies are installed
 # automatically from requirements.txt using the version pinned in mise.toml.
 [build]
+  # The app lives at the repository root.
+  base = "."
   command = "rm -rf dist && mkdir -p dist && cp templates/index.html dist/index.html && cp -r static dist/static"
   publish = "dist"
