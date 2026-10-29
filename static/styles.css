@@ -103,21 +103,36 @@ h2, h3, h1 {
   margin: 0;
 }
 
-.primary-button {
+.primary-button, .secondary-button {
   border: none;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--purple), var(--blue));
-  color: white;
   padding: 13px 18px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 18px 36px rgba(124, 58, 237, 0.38);
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.primary-button:hover {
+.primary-button {
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: white;
+  box-shadow: 0 18px 36px rgba(124, 58, 237, 0.38);
+}
+
+.secondary-button {
+  border: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.75);
+  color: var(--text);
+}
+
+.primary-button:hover, .secondary-button:hover {
   transform: translateY(-1px);
   filter: brightness(1.08);
+}
+
+.import-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects-block {
@@ -267,6 +282,7 @@ textarea {
   justify-content: flex-start;
   gap: 16px;
   margin-top: 18px;
+  flex-wrap: wrap;
 }
 
 .compact-field {
